@@ -822,3 +822,46 @@ body::before {
     pointer-events: all;
   }
 }
+/* ===== RESET: HIDE CONTENT BY DEFAULT ===== */
+.event-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.event-register-btn {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* ===== DESKTOP: HOVER ===== */
+@media (hover: hover) {
+  .event-item:hover .event-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .event-item:hover .event-register-btn {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* ===== MOBILE: TAP / HOLD ===== */
+@media (hover: none) {
+  .event-item:active .event-overlay,
+  .event-item:focus-within .event-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .event-item:active .event-register-btn,
+  .event-item:focus-within .event-register-btn {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
