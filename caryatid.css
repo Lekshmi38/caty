@@ -822,10 +822,3 @@ body::before {
     pointer-events: all;
   }
 }
-.event-item::before,
-.event-item::after,
-.event-item *::before,
-.event-item *::after {
-  content: none !important;
-  display: none !important;
-}
