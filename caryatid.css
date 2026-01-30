@@ -822,14 +822,10 @@ body::before {
     pointer-events: all;
   }
 }
-/* FORCE remove event text overlay on ALL screen sizes */
-.event-overlay {
+.event-item::before,
+.event-item::after,
+.event-item *::before,
+.event-item *::after {
+  content: none !important;
   display: none !important;
-}
-
-/* Mobile override safety */
-@media (max-width: 768px) {
-  .event-overlay {
-    display: none !important;
-  }
 }
