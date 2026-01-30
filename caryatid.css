@@ -313,33 +313,16 @@ body::before {
 }
 
 .event-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-  padding: 1.5rem;
-  transform: translateY(0);
-  transition: transform 0.3s ease;
+  display: none;
 }
 
-.event-item:hover .event-overlay { 
-  transform: translateY(-5px); 
+
+.event-item:hover .event-overlay {
+  opacity: 0;
 }
 
-.event-overlay h3 { 
-  font-size: 1.3rem; 
-  font-weight: 600; 
-  color: #dc143c; 
-  margin-bottom: 0.5rem; 
-}
 
-.event-overlay p { 
-  font-size: 0.9rem; 
-  color: #ccc; 
-  text-align: left; 
-  line-height: 1.4; 
-}
+
 
 .modal {
   display: none;
