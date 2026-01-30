@@ -822,3 +822,7 @@ body::before {
     pointer-events: all;
   }
 }
+/* Remove text overlay from event images */
+.event-overlay {
+  display: none !important;
+}
